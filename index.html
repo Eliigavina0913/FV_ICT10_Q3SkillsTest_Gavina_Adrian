@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skills Test</title>
+
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap CSS-->
+    <style>
+        body {
+            background-color: #f1beff;
+        }
+        .container {
+            max-width: 600px;
+            max-height: 600px;
+            background: white;
+            padding: 26px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+
+        label{
+	    font-style: italic;
+    }
+    h1{
+        color: rgb(212, 155, 255);
+        
+    }
+    button{
+        color: rgb(212, 155, 255);
+        font-family:'Courier New', Courier, monospace;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+
+    <br><br>
+    <div class="container text-center mt-5">
+        <h1 style="font-family:'Courier New', Courier, monospace; font-size: 350%;">Create Account</h1>
+        <br> <!---this is the block of code where you input the username and password-->
+    <label>Username:</label><br>
+        <input type="text" name="username" id="username" class="form-control" placeholder="Enter Username" required><br> 
+
+        <label>Password:</label><br>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password"><br>
+        
+        <br><br>
+    <!-- This is the button that will trigger the create_account function in main.py when clicked -->   
+    <button style="background-color: #f1beff; color: aliceblue;" class="btn btn-sign up" py-click="create_account" id="create_account" value = "sign up">Create Account</button>
+        <!-- This is where the result will be displayed -->
+        <div id="output"></div>
+        <div id="print" class="mt-3 fw-bold" style="color: rgb(212, 155, 255);"></div>
+    </div>
+
+    <!-- Link to the Python script, this links the index to main.py -->
+    <py-script src="main.py"></py-script>
+</body>
+</html>
